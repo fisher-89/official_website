@@ -1,0 +1,384 @@
+body{
+  width:1920px;
+}
+.header{
+  width:100%;
+  height:1080px;
+  background: url("../images/banner_image.png") 0 0 no-repeat;
+  background-size:100% 100%;
+  position: relative;
+  .banner-title{
+    height:83px;
+    width:719px;
+    position: absolute;
+    left:50%;
+    bottom:180px;
+    margin-left:-359px;
+    background:url("../images/bannner_title.png") 0 0 no-repeat;
+    background-size:100% 100%;
+  }
+  .banner-line{
+    height:150px;
+    width: 13px;
+    background: url("../images/banner_line.png") 0 0 no-repeat;
+    background-size:100% 100%;
+    position:absolute;
+    left:50%;
+    bottom:0;
+  }
+}
+.header-container{
+  position: absolute;
+  left:0;
+  top:0;
+  width:100%;
+  padding:35px 60px;
+  font-size: 18px;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 24px;
+	letter-spacing: 0px;
+  color: #f7f3e3;
+  overflow: hidden;
+  box-shadow: inset 0px -1px 0px 0px #af9064;
+}
+.header-container-left{
+  height:50px;
+  float: left;
+  padding-left:44px;
+  overflow: hidden;
+}
+.xg-logo{
+   width:153px;
+   height:50px;
+   margin-right:50px;
+   float: left;
+   img{
+     width: 100%;
+     height: 100%;
+   }
+}
+.xg-linktabs{
+    float: left;
+    overflow: hidden;
+    padding:0;
+    &>li{width:180px;
+      height:50px;
+      list-style: none;
+      float: left;
+      line-height:50px;
+      text-align:center;
+      &:hover{
+        opacity: .5;
+      }
+      &>a{
+        padding:0;
+        color:#f7f3e3
+      }
+    }
+}
+.header-container-right{
+  height: 50px;
+  padding:13px 19px;
+  float:right;
+  &>a{
+   color:#f7f3e3;
+  }
+
+}
+.xg-friendlink{
+  margin-right:43px;
+}
+.xg-linklogin{
+
+}
+/*企业文化*/
+.xg-culture{
+  width:1200px;
+  margin:0 auto;
+  margin-bottom: 180px;
+  background:url("../images/businessdocument_backgroud.png") 0 0 no-repeat;
+  background-size:100% 100%;
+}
+.culture-container{
+  padding:120px 100px 90px 100px;
+  background-color: #2b2117;
+	opacity: 0.9;
+}
+.culture-title{
+  width:199px;
+  height:64px;
+  margin-left:50%;
+  transform:translateX(-99px);
+  background:url("../images/culture_title.png") 0 0 no-repeat;
+  background-size:100% 100%;
+  margin-bottom:60px;
+}
+.culture-text{
+  p{
+    height: 288px;
+    font-family: PingFangSC-Light;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 36px;
+    letter-spacing: 0px;
+    text-align:center;
+    color: #f7f3e3;
+  }
+}
+/*品牌故事*/
+.mergecontainer{
+  overflow: hidden;
+}
+.xg-story{
+  position: relative;
+  z-index: 888;
+}
+.story-container{
+  width:1200px;  
+  margin:0 auto;
+}
+.story-title{    
+  width:127px;
+  height:64px;
+  margin-left:50%;
+  transform:translateX(-63px);
+  background:url("../images/brandstory_title.png") 0 0 no-repeat;
+  background-size:100% 100%;
+  margin-bottom: 60px;
+}
+.stoty-info{
+   overflow: hidden;
+  .stoty-info-item1,.stoty-info-item2,.stoty-info-item3{
+    width: 400px;
+    height:600px;
+    float: left;
+    position: relative;
+    img{
+      width:100%;
+      height:100%;
+    }
+    .info-hover{
+      width:100%;
+      height: 100%;
+      position:absolute;
+      left: 0;
+      top: 100%;
+      background:url("../images/brandstory_mask_hover.png") 0 0 no-repeat;
+      background-size:100% 100%;
+      transition: top 1s ease;
+      // visibility: hidden;
+      .logo{
+        width:100%;
+        height: 300px;
+      }
+      .detail{
+        padding:0 30px;
+        font-family: PingFangSC-Light;
+        font-size: 18px;
+        font-weight: normal;
+        font-stretch: normal;
+        line-height: 36px;
+        letter-spacing: 0px;
+        color: #f7f3e3;
+      }
+    }
+  }
+  .stoty-info-item1{
+    .info-hover{
+      .logo{
+        background:url("../images/brandstory_lisha_logo.png") 0 0 no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+    &:hover{
+      cursor: pointer;
+      .info-hover{
+        top:0;
+      }
+    }
+  }
+  .stoty-info-item2{
+    .info-hover{
+      .logo{
+        background:url("../images/brandstory_jnvn_logo.png") 0 0 no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+    &:hover{
+      .info-hover{
+        top:0
+      }
+    }
+  }
+  .stoty-info-item3{
+    .info-hover{
+      .logo{
+        background:url("../images/brandstory_go_logo.png") 0 0 no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+    &:hover{
+      .info-hover{
+        top:0
+      }
+    }
+  }
+}
+
+/*新闻资讯*/
+.xg-news{
+  margin-top:-240px;
+  background-color: #f7f3e3;
+}
+.news-container{
+  width:1200px;
+  margin:0 auto;
+  padding-top:420px;
+  padding-bottom: 180px;
+}
+.news-title{
+  width:193px;
+  height:64px;
+  margin-left:504px;
+  background: url("../images/newsinformation_title.png") 0 0 no-repeat;
+  background-size: 100% 100%;
+  margin-bottom: 60px;
+}
+.news-info{
+  overflow: hidden;
+}
+.news-info-img{
+  width:400px;
+  height: 300px;
+  float: left;
+  img{
+    width: 100%;
+    height:100%;
+    border:0;
+  }
+}
+.news-info-text{
+  width:740px; 
+  float: left;
+  padding-left:60px;
+  .title{
+    height: 33px;
+    font-size: 24px;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0px;
+    color: #2b2117;
+    padding-bottom: 30px;
+  }
+  .content{
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 36px;
+    letter-spacing: 0px;
+    color: #2b2117;
+    padding-bottom: 30px;
+  }
+  .date{
+    height: 25px;
+    font-family: PingFangSC-Light;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0px;
+    color: #2b2117;
+  }
+}
+
+/*招聘信息*/
+.xg-recruitment{
+  height: 1186px;
+  background: url("../images/employment_backgroud.png") 0 0 no-repeat;
+  background-size:100% 100%;
+}
+.recruitment-container{
+  width:1200px;
+  margin: 0 auto;
+  padding-top: 120px;
+  padding-bottom:120px;
+}
+.recruitment-title{
+   height:64px;
+   width:125px;
+   margin-left:538px;
+   background:url("../images/employment_title.png") 0 0 no-repeat;
+   background-size: 100% 100%;
+   margin-bottom: 60px;
+}
+.recruitment-text{
+  font-family: PingFangSC-Light;
+	font-size: 18px;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 36px;
+	letter-spacing: 0px;
+  color: #2b2117;
+  margin-bottom: 60px;
+}
+.recruitment-table{
+  font-family: PingFangSC-Regular;
+	font-size: 18px;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 54px;
+	letter-spacing: 0px;
+	color: #2b2117;
+}
+.recruitment-table-item{
+  height:55px;
+  border-bottom:1px solid #b3b6b7;
+  overflow: hidden;
+  .item-office{
+    width: 300px;
+    float: left;
+  }
+  .item-experience{
+    width: 300px;
+    float: left;
+  }
+  .item-place{
+    width: 300px;
+    float: left;
+    text-align: center;
+  }
+  .item-salary{
+    width: 300px;
+    float: left;
+    text-align:center;
+  }
+}
+/*底部栏*/
+.footer{
+  height: 150px;
+  background-color: #2b2117;
+}
+.footer-container{
+  width:1200px;
+  margin:0 auto;
+  padding:35px 0 65px 15px;
+  overflow: hidden;
+}
+.footer-logo{
+  width:153px;
+  height: 50px;
+  float: left;
+  background:url("../images/xg_logo.png") 0 0 no-repeat;
+  background-size:100% 100%;
+}
+.footer-address{
+  float: left;
+  margin-left:44px;
+  font-size: 14px;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 20px;
+	letter-spacing: 0px;
+	color: #b3b6b7;
+}
