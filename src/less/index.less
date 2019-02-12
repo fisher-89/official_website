@@ -1,109 +1,43 @@
-body{
-  width:1920px;
-}
-.header{
+.xg-mainpicture{
   width:100%;
-  height:1080px;
-  background: url("../images/banner_image.png") 0 0 no-repeat;
-  background-size:100% 100%;
+  height:0;
   position: relative;
+  background: url("../images/banner_image.png") 0 0 no-repeat;
+  padding-top:56%;
+  background-size:100% auto;
   .banner-title{
-    height:83px;
-    width:719px;
-    position: absolute;
-    left:50%;
+    height:0;
+    width:37%;
+    padding-top:4.3%;
+    position: relative;
     bottom:180px;
-    margin-left:-359px;
+    margin:0 auto;
     background:url("../images/bannner_title.png") 0 0 no-repeat;
     background-size:100% 100%;
   }
   .banner-line{
     height:150px;
     width: 13px;
+    margin:0 auto;
+    position: relative;
+    bottom:150px;
     background: url("../images/banner_line.png") 0 0 no-repeat;
     background-size:100% 100%;
-    position:absolute;
-    left:50%;
-    bottom:0;
   }
-}
-.header-container{
-  position: absolute;
-  left:0;
-  top:0;
-  width:100%;
-  padding:35px 60px;
-  font-size: 18px;
-	font-weight: normal;
-	font-stretch: normal;
-	line-height: 24px;
-	letter-spacing: 0px;
-  color: #f7f3e3;
-  overflow: hidden;
-  box-shadow: inset 0px -1px 0px 0px #af9064;
-}
-.header-container-left{
-  height:50px;
-  float: left;
-  padding-left:44px;
-  overflow: hidden;
-}
-.xg-logo{
-   width:153px;
-   height:50px;
-   margin-right:50px;
-   float: left;
-   img{
-     width: 100%;
-     height: 100%;
-   }
-}
-.xg-linktabs{
-    float: left;
-    overflow: hidden;
-    padding:0;
-    &>li{width:180px;
-      height:50px;
-      list-style: none;
-      float: left;
-      line-height:50px;
-      text-align:center;
-      &:hover{
-        opacity: .5;
-      }
-      &>a{
-        padding:0;
-        color:#f7f3e3
-      }
-    }
-}
-.header-container-right{
-  height: 50px;
-  padding:13px 19px;
-  float:right;
-  &>a{
-   color:#f7f3e3;
-  }
-
-}
-.xg-friendlink{
-  margin-right:43px;
-}
-.xg-linklogin{
-
 }
 /*企业文化*/
 .xg-culture{
-  width:1200px;
+  max-width:1200px;
+  width:100%;
   margin:0 auto;
-  margin-bottom: 180px;
+  margin-bottom: 9.3%;
   background:url("../images/businessdocument_backgroud.png") 0 0 no-repeat;
   background-size:100% 100%;
 }
 .culture-container{
-  padding:120px 100px 90px 100px;
+  padding:10% 8.3% 7.5% 10%;
   background-color: #2b2117;
-	opacity: 0.9;
+        opacity: 0.9;
 }
 .culture-title{
   width:199px;
@@ -136,10 +70,11 @@ body{
   z-index: 888;
 }
 .story-container{
-  width:1200px;  
+  max-width:1200px;
+  width:100%;
   margin:0 auto;
 }
-.story-title{    
+.story-title{
   width:127px;
   height:64px;
   margin-left:50%;
@@ -150,14 +85,15 @@ body{
 }
 .stoty-info{
    overflow: hidden;
+   width:100%;
   .stoty-info-item1,.stoty-info-item2,.stoty-info-item3{
-    width: 400px;
-    height:600px;
+    width: 33.3%;
+    height:auto;
     float: left;
     position: relative;
+    overflow: hidden;
     img{
       width:100%;
-      height:100%;
     }
     .info-hover{
       width:100%;
@@ -229,19 +165,21 @@ body{
 
 /*新闻资讯*/
 .xg-news{
-  margin-top:-240px;
+  width:100%;
+  margin-top:-12.5%;
   background-color: #f7f3e3;
 }
 .news-container{
-  width:1200px;
+  max-width:1200px;
+  width:100%;
   margin:0 auto;
-  padding-top:420px;
-  padding-bottom: 180px;
+  padding-top:21.87%;
+  padding-bottom: 9.37%;
 }
 .news-title{
   width:193px;
   height:64px;
-  margin-left:504px;
+  margin:0 auto;
   background: url("../images/newsinformation_title.png") 0 0 no-repeat;
   background-size: 100% 100%;
   margin-bottom: 60px;
@@ -250,27 +188,26 @@ body{
   overflow: hidden;
 }
 .news-info-img{
-  width:400px;
-  height: 300px;
+  width:33.3%;
+  overflow: hidden;
   float: left;
   img{
     width: 100%;
-    height:100%;
     border:0;
   }
 }
 .news-info-text{
-  width:740px; 
+  width:66.6%;
   float: left;
-  padding-left:60px;
+  padding: 0 3.1%;
   .title{
-    height: 33px;
     font-size: 24px;
     font-weight: normal;
     font-stretch: normal;
     letter-spacing: 0px;
     color: #2b2117;
-    padding-bottom: 30px;
+    padding: 3.7% 0;
+    margin:0;
   }
   .content{
     font-size: 18px;
@@ -279,7 +216,8 @@ body{
     line-height: 36px;
     letter-spacing: 0px;
     color: #2b2117;
-    padding-bottom: 30px;
+    padding-bottom: 3.7%;
+    margin:0;
   }
   .date{
     height: 25px;
@@ -289,17 +227,20 @@ body{
     font-stretch: normal;
     letter-spacing: 0px;
     color: #2b2117;
+    margin:0;
   }
 }
 
 /*招聘信息*/
 .xg-recruitment{
+  width:100%;
   height: 1186px;
   background: url("../images/employment_backgroud.png") 0 0 no-repeat;
   background-size:100% 100%;
 }
 .recruitment-container{
-  width:1200px;
+  max-width:1200px;
+  width:90%;
   margin: 0 auto;
   padding-top: 120px;
   padding-bottom:120px;
@@ -307,78 +248,50 @@ body{
 .recruitment-title{
    height:64px;
    width:125px;
-   margin-left:538px;
+   margin:0 auto;
    background:url("../images/employment_title.png") 0 0 no-repeat;
    background-size: 100% 100%;
    margin-bottom: 60px;
 }
 .recruitment-text{
-  font-family: PingFangSC-Light;
-	font-size: 18px;
-	font-weight: normal;
-	font-stretch: normal;
-	line-height: 36px;
-	letter-spacing: 0px;
+  font-family: 'PingFangSC-Light';
+        font-size: 18px;
+        font-weight: normal;
+        font-stretch: normal;
+        line-height: 36px;
+        letter-spacing: 0px;
   color: #2b2117;
   margin-bottom: 60px;
 }
 .recruitment-table{
   font-family: PingFangSC-Regular;
-	font-size: 18px;
-	font-weight: normal;
-	font-stretch: normal;
-	line-height: 54px;
-	letter-spacing: 0px;
-	color: #2b2117;
+        font-size: 18px;
+        font-weight: normal;
+        font-stretch: normal;
+        line-height: 54px;
+        letter-spacing: 0px;
+        color: #2b2117;
 }
 .recruitment-table-item{
   height:55px;
   border-bottom:1px solid #b3b6b7;
   overflow: hidden;
   .item-office{
-    width: 300px;
+    width: 25%;
     float: left;
   }
   .item-experience{
-    width: 300px;
+    width: 25%;
     float: left;
   }
   .item-place{
-    width: 300px;
+    width: 25%;
     float: left;
     text-align: center;
   }
   .item-salary{
-    width: 300px;
+    width: 25%;
     float: left;
     text-align:center;
   }
-}
-/*底部栏*/
-.footer{
-  height: 150px;
-  background-color: #2b2117;
-}
-.footer-container{
-  width:1200px;
-  margin:0 auto;
-  padding:35px 0 65px 15px;
-  overflow: hidden;
-}
-.footer-logo{
-  width:153px;
-  height: 50px;
-  float: left;
-  background:url("../images/xg_logo.png") 0 0 no-repeat;
-  background-size:100% 100%;
-}
-.footer-address{
-  float: left;
-  margin-left:44px;
-  font-size: 14px;
-	font-weight: normal;
-	font-stretch: normal;
-	line-height: 20px;
-	letter-spacing: 0px;
-	color: #b3b6b7;
 }

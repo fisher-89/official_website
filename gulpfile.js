@@ -64,25 +64,27 @@ gulp.task('publish-css', function () {
         .pipe(gulp.dest('dist/stylesheets'))
         .pipe(browserSync.stream());
 });
+gulp.task('pages-css', function () {
+
+    return streamSeries(
+        gulp.src('src/pages/**/*.less')
+            .pipe(plumber({
+                errorHandler: errorAlert
+            }))
+            .pipe(less())
+            .pipe(autoprefixer({
+                browsers:['last 1 version','> 1%','ie 10']//https://browserl.ist/?q=last+4+versions  通过这个可查询browsers参数所支持的浏览器
+            }))
+    )
+        .pipe(gulp.dest('dist/pages'))
+        .pipe(browserSync.stream());
+});
 // bundle CommonJS modules under src/javascripts, concat javascripts in the right order,
 // and save as dist/javascripts/bundle.js
-// gulp.task('publish-js', function () {
-//     var jsVendors = vendors.javascripts;
-
-//     return streamSeries(
-//         gulp.src(jsVendors),
-//         gulp.src('src/javascripts/main.js')
-//             .pipe(plumber({
-//                 errorHandler: errorAlert
-//             }))
-//             .pipe(browserify({
-//                 transform: ['partialify'],
-//                 debug: true
-//             }))
-//         )
-//         .pipe(concat('bundle.js'))
-//         .pipe(gulp.dest('dist/javascripts'));
-// });
+gulp.task('pages-html',function(){
+    return gulp.src('src/pages/**/*.html')
+    .pipe(gulp.dest("dist/pages"))
+})
 
 gulp.task('publish-js', function () {
     return gulp.src('src/javascripts/*')
@@ -117,12 +119,15 @@ gulp.task('watch', function () {
 
     gulp.watch('src/index.html', ['inject']);
     gulp.watch(['src/less/**/*.less','src/less/*.less'], ['publish-css']);
+    gulp.watch('src/pages/**/*.less',['pages-css']);
+    gulp.watch('src/pages/**/*.html',['pages-html']);
     gulp.watch('src/javascripts/**/*', ['publish-js']);
     gulp.watch('src/fonts/**/*', ['publish-fonts']);
     gulp.watch('src/images/**/*', ['publish-images']);
     gulp.watch('src/audios/**/*', ['publish-audios']);
 
     gulp.watch('dist/index.html').on('change', browserSync.reload);
+    gulp.watch('dist/pages/*').on("change",browserSync.reload);
     gulp.watch('dist/javascripts/*').on('change', browserSync.reload);
     gulp.watch('dist/fonts/*').on('change', browserSync.reload);
     gulp.watch('dist/images/*').on('change', browserSync.reload);
@@ -142,7 +147,7 @@ gulp.task('clean-files', function(cb) {
 
 // development workflow task
 gulp.task('dev', function (cb) {
-    runSequence(['clean-files'], ['publish-fonts', 'publish-images', 'publish-audios', 'publish-css', 'publish-js'], 'inject', 'watch', cb);
+    runSequence(['clean-files'], ['publish-fonts', 'publish-images','pages-html','pages-css', 'publish-audios', 'publish-css', 'publish-js'], 'inject', 'watch', cb);
 });
 
 // default task
